@@ -12,6 +12,33 @@
 
 namespace App\Models{
 /**
+ * App\Models\Day
+ *
+ * @property int $id
+ * @property int $user_id
+ * @property string $date
+ * @property float $water
+ * @property int $first_missed
+ * @property float $first_fat
+ * @property int $second_missed
+ * @property float $second_fat
+ * @method static \Illuminate\Database\Eloquent\Builder|Day newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Day newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Day query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Day whereDate($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Day whereFirstFat($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Day whereFirstMissed($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Day whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Day whereSecondFat($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Day whereSecondMissed($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Day whereUserId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Day whereWater($value)
+ */
+	class Day extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
  * App\Models\User
  *
  * @property int $id

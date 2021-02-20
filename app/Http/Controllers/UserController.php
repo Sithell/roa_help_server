@@ -13,7 +13,7 @@ class UserController extends Controller
         $password = $request->input('password');
 
         $user = User::whereEmail($email)->first();
-        if ($user->count() > 0) {
+        if (!is_null($user)) {
             return self::jsonResponse([], 400, "User already exists");
         }
         $user = new User();
@@ -46,7 +46,7 @@ class UserController extends Controller
         $email = $request->input('email');
         $password = $request->input('password');
         $user = User::whereEmail($email)->first();
-        if ($user->count() == 0) {
+        if (is_null($user)) {
             return self::jsonResponse([], 404, "User not found");
         }
         if ($user->password != $password) {
@@ -54,10 +54,11 @@ class UserController extends Controller
         }
         $token = Str::random(80);
         $user->api_token = $token;
+        $user->save();
         return self::jsonResponse(["token" => $token]);
     }
 
     function index(Request $request) {
-        return self::jsonResponse($request->user());
+        return self::jsonResponse(User::whereApiToken($request->input("token"))->first());
     }
 }
