@@ -39,6 +39,25 @@ namespace App\Models{
 
 namespace App\Models{
 /**
+ * App\Models\Note
+ *
+ * @property int $id
+ * @property int $user_id
+ * @property string $date
+ * @property string $text
+ * @method static \Illuminate\Database\Eloquent\Builder|Note newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Note newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Note query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Note whereDate($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Note whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Note whereText($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Note whereUserId($value)
+ */
+	class Note extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
  * App\Models\User
  *
  * @property int $id
