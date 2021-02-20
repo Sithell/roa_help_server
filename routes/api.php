@@ -28,3 +28,4 @@ Route::get('/day/{date}', [\App\Http\Controllers\DayController::class, 'show']);
 Route::post('/water', [\App\Http\Controllers\DayController::class, 'water']);
 Route::post('/drug', [\App\Http\Controllers\DayController::class, 'drug']);
 Route::post('/note', [\App\Http\Controllers\NoteController::class, 'create']);
+Route::get('/food/{name}', [\App\Http\Controllers\FoodController::class, 'show']);
