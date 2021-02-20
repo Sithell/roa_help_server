@@ -26,3 +26,4 @@ Route::get('/user', [\App\Http\Controllers\UserController::class, 'index']);
 Route::post('/day', [\App\Http\Controllers\DayController::class, 'create']);
 Route::get('/day/{date}', [\App\Http\Controllers\DayController::class, 'show']);
 Route::post('/water', [\App\Http\Controllers\DayController::class, 'water']);
+Route::post('/drug', [\App\Http\Controllers\DayController::class, 'drug']);
