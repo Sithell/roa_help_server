@@ -32,3 +32,4 @@ Route::get('/food/{name}', [\App\Http\Controllers\FoodController::class, 'show']
 
 Route::get('/articles', [\App\Http\Controllers\ArticleController::class, 'index']);
 Route::get('/stores', [\App\Http\Controllers\StoreController::class, 'index']);
+Route::get('/recipes', [\App\Http\Controllers\RecipeController::class, 'index']);
