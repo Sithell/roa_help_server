@@ -8,6 +8,6 @@ use Illuminate\Http\Request;
 class RecipeController extends Controller
 {
     function index(Request $request) {
-        return $this::jsonResponse(["items" => Recipe::whereId(1)->get()]);
+        return $this::jsonResponse(["items" => Recipe::all()]);
     }
 }
