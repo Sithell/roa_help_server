@@ -8,6 +8,6 @@ use Illuminate\Http\Request;
 class FoodController extends Controller
 {
     function show(Request $request, string $name) {
-        return $this::jsonResponse(Food::where('name', 'LIKE', '%'.$name.'%')->get());
+        return $this::jsonResponse(["items" => Food::where('name', 'LIKE', '%'.$name.'%')->get()]);
     }
 }

@@ -8,6 +8,6 @@ use Illuminate\Http\Request;
 class StoreController extends Controller
 {
     function index(Request $request) {
-        return $this::jsonResponse(Store::all());
+        return $this::jsonResponse(["items" => Store::all()]);
     }
 }
